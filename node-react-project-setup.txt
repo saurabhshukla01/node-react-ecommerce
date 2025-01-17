@@ -1,0 +1,126 @@
+node project setup  >>
+
+create folder >>   
+mkdir e-dashboard
+
+goto folder inside >>
+cd e-dashboard
+
+how to create package.json file ...
+# npm init
+
+Ask some question please fill as per ask question to answer.
+
+##################################
+
+Press ^C at any time to quit.
+package name: (e-dashboard)
+version: (1.0.0)
+description:
+entry point: (index.js)
+test command:
+git repository:
+keywords:
+author:
+license: (ISC)
+About to write to C:\React-learning\node-react\e-dashboard\package.json:
+
+{
+  "name": "e-dashboard",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
+
+
+Is this OK? (yes) yes
+
+####################################
+
+create index.js file 
+
+Install express for node Js  ...
+# npm install express
+
+Install express for node Js  ...
+# npm install mongoose --save
+
+Install nodemon for node Js  ...
+# npm install express
+
++++++++++++++++++++++++++++++++++++++++
+
+create index.js file code is  >>>
+
+------------------------------------
+
+const express = require("express");
+
+const app = express();
+const port = 5000;
+
+app.get("/",(req,resp) => {
+    console.log("resp",resp);
+    resp.send("app is working ..")
+});
+
+app.listen(port, () => {
+    console.log(`iNotebook backend listening at http://localhost:${port}`)
+})
+
+------------------------------------
+
+run the server in node js project >>>
+
+# nodemon 
+
+its working backend server..
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Setup for Front-End in react >>>
+
+How to install projecr in react Js >>
+# npx create-react-app front-end
+# cd front-end
+Install web-vitals in react project >>
+# npm install web-vitals
+now run project in react front-end >>
+# npm start
+now Install react-router-dom for react dashboard as frontend using Link & routes ..
+# npm install react-router-dom@6
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+DB setup & mongoDB compass 
+
+C:\Program Files\MongoDB\Server\7.0\bin
+this Pc >  advance settings >  Env variable  >  Edit env  > paste path > Ok  >  Ok 
+
+update & install the setup mongoDB in our PC.
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+How to create database in MongoDBCompass 
+
+first need to create >>  open collections  >>  create new connection >>  inside this new connection >>
+create Database name fill , create collection name fill & click on create database its create database inside table ..
+
+now you can manage collection inside object & all .
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+How to install manage node project with env file ...
+
+
+
+
+
