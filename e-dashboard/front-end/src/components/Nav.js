@@ -10,6 +10,8 @@ const Nav = () => {
                 <li><Link to="/logout">Logout</Link></li>
                 <li><Link to="/profile">Profile</Link></li>
                 <li><Link to="/signup">SignUp</Link></li>
+                <li><Link to="/parent">Parent</Link></li>
+                <li><Link to="/child">Child</Link></li>
             </ul>
         </div>
     )

@@ -120,6 +120,27 @@ now you can manage collection inside object & all .
 
 How to install manage node project with env file ...
 
+create db folder inside config , User , Product model and all..
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+Fix Cors issue in Node js  >>>
+install one package for cors in node Js ..
+
+# npm install cors
+
+write some code in NodeJs inside index.js file ...
+
+const cors = require("cors");
+app.use(cors());
+
+after write code then start npm again ..
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
 
 
 
