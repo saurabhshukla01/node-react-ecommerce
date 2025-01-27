@@ -7,14 +7,29 @@ const port = 5000;
 app.use(express.json());
 app.use(cors());
 
+// create register api in node Js
 app.post("/register", async (req,resp) => {
-    // resp.send("api is progress ..")
-    // resp.send(req.body);
-
     // how to save user data in user collections
     let user = new User(req.body);
     let result = await user.save();
-    resp.send(user);
+    result = result.toObject();
+    delete result.password;
+    resp.send(result);
+});
+
+// create login api in node Js
+app.post("/login", async (req,resp) => {
+    console.log(req.body);
+    if(req.body.email && req.body.password){
+        let user = await User.findOne(req.body).select("-password");
+        if(user){
+            resp.send(user);
+        }else{
+            resp.send({result:"No User Found"});
+        }
+    }else{
+        resp.send({result:"No User Found"});
+    }
 });
 
 app.listen(port, () => {
