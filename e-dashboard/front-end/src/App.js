@@ -7,6 +7,7 @@ import Parent from './components/parents/Parent';
 import ChildParent from './components/childs/Parent';
 import PrivateComponent from './components/PrivateComponent';
 import Login from './components/Login';
+import AddProduct from './components/AddProduct';
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
       <Routes>
         <Route element={<PrivateComponent/>}>
         <Route path="/" element={<h2>Product Listing Component</h2>} />
-        <Route path="/add" element={<h2>Add Product Component</h2>} />
+        <Route path="/add" element={<AddProduct/>} />
         <Route path="/update" element={<h2>Update Product Component</h2>} />
         <Route path="/logout" element={<h2>Logout Component</h2>} />
         <Route path="/profile" element={<h2>Profile Component</h2>} />

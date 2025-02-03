@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 require('./db/config');
 const User = require('./db/User');
+const Product = require('./db/Product');
 const app = express();
 const port = 5000;
 app.use(express.json());
@@ -31,6 +32,13 @@ app.post("/login", async (req,resp) => {
         resp.send({result:"No User Found"});
     }
 });
+
+// create Add Product api in node Js
+app.post("/add-product" , async (req,resp) => {
+    let product = new Product(req.body);
+    let result = await product.save();
+    resp.send(result);
+})
 
 app.listen(port, () => {
     console.log(`iNotebook backend listening at http://localhost:${port}`)

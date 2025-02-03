@@ -15,6 +15,10 @@
   background-color: skyblue;
 }
 
+.nav-right {
+  text-align: right;
+}
+
 .footer {
   position: absolute;
   bottom: 0;
@@ -54,6 +58,17 @@
   margin-top:100px;
 }
 
+.product {
+  margin-left: 30%;
+}
+
+.invalid-input {
+  color:red;
+  margin-top: -20px;
+  display: block;
+  margin-left: 20px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -82,4 +97,29 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.logo {
+  width: 50px;
+  height: 40px;
+  float: left;
+  border-radius: 50%;
+  margin: 5px 0 0 20px; /* Shorthand for margin */
+}
+
+
+.logo-item {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  margin-right: 10px;
+  width: 150px;  /* Adjust width */
+  height: 50px;  /* Adjust height */
+}
+
+.company-name {
+  font-size: 16px;
+  font-weight: bold;
 }
