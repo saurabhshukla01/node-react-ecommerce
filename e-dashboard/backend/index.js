@@ -50,6 +50,16 @@ app.get("/products" , async (req,resp) => {
     }
 })
 
+// create Delete Product api in node Js
+app.delete("/product/:id" , async (req,resp) => {
+    const result = await Product.deleteOne({_id:req.params.id});
+    if(result.deletedCount > 0){
+        resp.send(result);
+    }else{
+        resp.send({result:"Somethings went wrong"});
+    }
+})
+
 app.listen(port, () => {
     console.log(`iNotebook backend listening at http://localhost:${port}`)
 })

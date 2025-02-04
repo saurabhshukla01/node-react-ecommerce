@@ -1,0 +1,500 @@
+{
+	"info": {
+		"_postman_id": "01064294-7708-4d6a-ad68-6c2b2cc1f3db",
+		"name": "Node React Ecommerce API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33160480"
+	},
+	"item": [
+		{
+			"name": "Auth APIs",
+			"item": [
+				{
+					"name": "Register API",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Mukesh Tiwari\",\r\n    \"email\":\"mukesh.t@gmail.com\",\r\n    \"password\":\"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Register API Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Mukesh Tiwari\",\r\n    \"email\":\"mukesh.t@gmail.com\",\r\n    \"password\":\"12345678\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "94"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5e-fYwznf4skbkG7YovsXYMG9qMJ9M\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 27 Jan 2025 06:44:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"Mukesh Tiwari\",\n    \"email\": \"mukesh.t@gmail.com\",\n    \"_id\": \"67972b359dd3e37aa8a57d03\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Login API",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"ss@gmail.com\",\r\n    \"password\":\"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login API Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"ss@gmail.com\",\r\n    \"password\":\"12345678\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "89"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"59-pMrhb0GmXZAC8XnOBN+L5YBqM74\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 27 Jan 2025 07:04:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"679721ef66c9782fe4d54f8a\",\n    \"name\": \"Saurabh Shukla\",\n    \"email\": \"ss@gmail.com\",\n    \"__v\": 0\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Products APIs",
+			"item": [
+				{
+					"name": "Add Product API",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"MI 009\",\r\n    \"price\":\"200\",\r\n    \"category\":\"Mobile\",\r\n    \"userId\":\"679721ef66c9782fe4d54f8a\",\r\n    \"company\":\"MI\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/add-product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"add-product"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add Product Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"M 40\",\r\n    \"price\":\"400\",\r\n    \"category\":\"Mobile\",\r\n    \"userId\":\"679721ef66c9782fe4d54f8a\",\r\n    \"company\":\"Samsung\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/add-product",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"add-product"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "146"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"92-26czWkgCsMOgzj1hZsgEEgsoxfs\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 30 Jan 2025 05:29:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"M 40\",\n    \"price\": \"400\",\n    \"category\": \"Mobile\",\n    \"userId\": \"679721ef66c9782fe4d54f8a\",\n    \"company\": \"Samsung\",\n    \"_id\": \"679b0e2cd7d1b59f591cbe8d\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Product API",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"MI 009\",\r\n    \"price\":\"200\",\r\n    \"category\":\"Mobile\",\r\n    \"userId\":\"679721ef66c9782fe4d54f8a\",\r\n    \"company\":\"MI\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add Product API Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"MI 009\",\r\n    \"price\":\"200\",\r\n    \"category\":\"Mobile\",\r\n    \"userId\":\"679721ef66c9782fe4d54f8a\",\r\n    \"company\":\"MI\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/products",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"products"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "876"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"36c-PigZWTBCPDaqsjGHZeJ8kXhcSBg\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 03 Feb 2025 11:26:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"679b0e2cd7d1b59f591cbe8d\",\n        \"name\": \"M 40\",\n        \"price\": \"400\",\n        \"category\": \"Mobile\",\n        \"userId\": \"679721ef66c9782fe4d54f8a\",\n        \"company\": \"Samsung\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"679b0fb9d7d1b59f591cbe8f\",\n        \"name\": \"M 30\",\n        \"price\": \"300\",\n        \"category\": \"Mobile\",\n        \"userId\": \"679721ef66c9782fe4d54f8a\",\n        \"company\": \"Samsung\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"679b0fc1d7d1b59f591cbe91\",\n        \"name\": \"M 20\",\n        \"price\": \"200\",\n        \"category\": \"Mobile\",\n        \"userId\": \"679721ef66c9782fe4d54f8a\",\n        \"company\": \"Samsung\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"679b0fc7d7d1b59f591cbe93\",\n        \"name\": \"M 10\",\n        \"price\": \"100\",\n        \"category\": \"Mobile\",\n        \"userId\": \"679721ef66c9782fe4d54f8a\",\n        \"company\": \"Samsung\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"679b0fd5d7d1b59f591cbe95\",\n        \"name\": \"KI 10\",\n        \"price\": \"100\",\n        \"category\": \"Mobile\",\n        \"userId\": \"679721ef66c9782fe4d54f8a\",\n        \"company\": \"KI\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"679b0fe5d7d1b59f591cbe97\",\n        \"name\": \"MI 009\",\n        \"price\": \"200\",\n        \"category\": \"Mobile\",\n        \"userId\": \"679721ef66c9782fe4d54f8a\",\n        \"company\": \"MI\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Delete Product API",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"MI 009\",\r\n    \"price\":\"200\",\r\n    \"category\":\"Mobile\",\r\n    \"userId\":\"679721ef66c9782fe4d54f8a\",\r\n    \"company\":\"MI\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/product/679b0fb9d7d1b59f591cbe8f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"product",
+								"679b0fb9d7d1b59f591cbe8f"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Product API Response",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"MI 009\",\r\n    \"price\":\"200\",\r\n    \"category\":\"Mobile\",\r\n    \"userId\":\"679721ef66c9782fe4d54f8a\",\r\n    \"company\":\"MI\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/product/679b0fb9d7d1b59f591cbe8f",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"product",
+										"679b0fb9d7d1b59f591cbe8f"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "38"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"26-fgR5yLHQ1Hpp6zDESHaY9wJreYE\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 04 Feb 2025 05:22:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"acknowledged\": true,\n    \"deletedCount\": 1\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
